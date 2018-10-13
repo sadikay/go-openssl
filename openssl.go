@@ -181,7 +181,7 @@ func (o OpenSSL) EncryptBytesWithSaltAndDigestFunc(passphrase string, salt, plai
 		return nil, err
 	}
 
-	enc, err := o.encrypt(creds.key, creds.iv, data)
+	enc, err := o.encrypt(creds.key, "1234567890123456", data)
 	if err != nil {
 		return nil, err
 	}
